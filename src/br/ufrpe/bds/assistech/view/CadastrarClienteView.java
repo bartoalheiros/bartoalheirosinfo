@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.TableColumn;
 import javax.swing.JScrollPane;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
@@ -23,6 +24,7 @@ public class CadastrarClienteView extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -74,6 +76,8 @@ public class CadastrarClienteView extends JFrame {
 				FormSpecs.RELATED_GAP_ROWSPEC,
 				RowSpec.decode("max(26dlu;default)"),
 				FormSpecs.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("default:grow"),
+				FormSpecs.RELATED_GAP_ROWSPEC,
 				FormSpecs.DEFAULT_ROWSPEC,
 				FormSpecs.RELATED_GAP_ROWSPEC,
 				FormSpecs.DEFAULT_ROWSPEC,
@@ -117,6 +121,11 @@ public class CadastrarClienteView extends JFrame {
 		
 		JLabel lblNewLabel_5 = new JLabel("Equipamentos");
 		contentPane.add(lblNewLabel_5, "2, 20, center, default");
+		
+		table = new JTable();
+		TableColumn c = new TableColumn();
+		table.addColumn(c);
+		contentPane.add(table, "2, 22, fill, fill");
 
 	}
 

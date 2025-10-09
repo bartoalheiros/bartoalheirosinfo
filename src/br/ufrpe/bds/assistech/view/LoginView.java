@@ -45,7 +45,7 @@ public class LoginView extends View {
 		contentPane.add(panel);
 		panel.setLayout(null);
 
-		setResizable(true);
+		setResizable(false);
 		setLocationRelativeTo(null);
 		tf_Login = new JTextField();
 		tf_Login.setBounds(98, 98, 260, 20);
